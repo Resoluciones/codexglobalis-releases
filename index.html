@@ -7,7 +7,40 @@
   <link rel="icon" href="favicon.ico" sizes="16x16 24x24 32x32 48x48 64x64 128x128 256x256" type="image/x-icon">
   <link rel="icon" href="favicon.png" sizes="32x32" type="image/png">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
-  <link rel="stylesheet" href="styles.css?v=20260223-3">
+  <link rel="stylesheet" href="styles.css?v=20260311-1">
+  <style>
+    /* Layout fix: evitar que img/svg ocupen toda la pantalla (GitHub Pages) */
+    body > img, body > svg,
+    main img, main svg,
+    .section img, .section svg,
+    .grid img, .grid svg,
+    .container img, .container svg {
+      max-width: 100%;
+      max-height: min(80vh, 600px);
+      width: auto;
+      height: auto;
+      object-fit: contain;
+    }
+    .feed-item img, .feed-item svg {
+      max-width: 48px;
+      max-height: 48px;
+      width: 48px;
+      height: 48px;
+      object-fit: contain;
+      flex-shrink: 0;
+    }
+    .feed-item-avatar {
+      overflow: hidden;
+    }
+    .feed-item-avatar img,
+    .feed-item-avatar svg {
+      width: 28px !important;
+      height: 28px !important;
+      max-width: 28px;
+      max-height: 28px;
+      object-fit: contain;
+    }
+  </style>
   <script src="i18n_20260309_1.js"></script>
   <script>
     (function(){ var l = (window.codexGetInitialLang && window.codexGetInitialLang()) || 'en'; document.documentElement.lang = l; })();
